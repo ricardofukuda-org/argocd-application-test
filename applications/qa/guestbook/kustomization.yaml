@@ -1,0 +1,6 @@
+resources:
+- ../../base/guestbook
+patches:
+- path: patch.yaml
+  target:
+    kind: Application
