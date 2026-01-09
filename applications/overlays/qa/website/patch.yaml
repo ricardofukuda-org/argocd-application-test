@@ -6,7 +6,7 @@ spec:
   destination:
     namespace: qa
   source:
-    targetRevision: main
+    targetRevision: main # helm chart version or helm chart branch name
     helm:
       valueFiles:
       - ../../applications/overlays/qa/website/values.yaml
