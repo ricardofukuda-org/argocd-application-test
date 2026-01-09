@@ -20,17 +20,14 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/ricardofukuda-org/argocd-application-test.git  # Can point to either a Helm chart repo or a git repo.
-    targetRevision: main  # For Helm, this refers to the chart version.
-    path: helm-charts/base-application/  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
+    repoURL: https://charts.bitnami.com/bitnami  # Can point to either a Helm chart repo or a git repo.
+    targetRevision: 11.4.29  # For Helm, this refers to the chart version.
+    #path: helm-charts/base-application/  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
     helm:
       # Release name override (defaults to application name)
       releaseName: website
-
-      # Helm values files for overriding values in the helm chart
-      # The path is relative to the spec.source.path directory defined above
       valueFiles:
-      - values.yaml
+      - values.yaml  
   # Destination cluster and namespace to deploy the application
   destination:
     # cluster API URL
