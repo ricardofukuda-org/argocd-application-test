@@ -1,4 +1,4 @@
-commonLabels:
+labels:
   env: qa
 resources:
 - guestbook/
