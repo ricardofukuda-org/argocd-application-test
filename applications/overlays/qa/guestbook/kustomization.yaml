@@ -1,5 +1,5 @@
 resources:
-- ../../base/guestbook
+- ../../../base/guestbook
 patches:
 - path: patch.yaml
   target:

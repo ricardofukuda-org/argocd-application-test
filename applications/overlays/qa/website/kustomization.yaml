@@ -1,5 +1,5 @@
 resources:
-- ../../base/website
+- ../../../base/website
 patches:
 - path: patch.yaml
   target:
