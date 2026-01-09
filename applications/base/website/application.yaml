@@ -27,7 +27,7 @@ spec:
       # Release name override (defaults to application name)
       releaseName: website
       valueFiles:
-      - $values/qa/website/values.yaml
+      - $values/applications/qa/website/values.yaml
   - repoURL: https://github.com/ricardofukuda-org/argocd-application-test
     targetRevision: main
     ref: values
