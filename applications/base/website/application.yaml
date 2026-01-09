@@ -19,7 +19,7 @@ spec:
   project: default
 
   # Source of the application manifests
-  source:
+  sources:
     - repoURL: https://github.com/ricardofukuda-org/argocd-application-test  # Can point to either a Helm chart repo or a git repo.
       path: helm-charts/base-application
       targetRevision: main  # For Helm, this refers to the chart version.
