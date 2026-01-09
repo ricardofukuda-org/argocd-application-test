@@ -7,4 +7,5 @@ ingress:
 
 service:
   port: 3000
+
 command: ["npm","start"]
