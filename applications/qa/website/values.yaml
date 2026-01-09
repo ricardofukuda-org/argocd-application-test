@@ -1,0 +1,15 @@
+fullnameOverride: website
+image:
+  repository: 127923327338.dkr.ecr.us-east-1.amazonaws.com/website
+  tag: "2141a48cb55b26eb0cbec959e4e7792cfd8f91cc"
+
+ingress:
+  enabled: false
+
+#fullnameOverride: website
+#image:
+#  registry: "127923327338.dkr.ecr.us-east-1.amazonaws.com"
+#  repository: website
+#  tag: 2141a48cb55b26eb0cbec959e4e7792cfd8f91cc
+#ingress:
+#  enabled: false
