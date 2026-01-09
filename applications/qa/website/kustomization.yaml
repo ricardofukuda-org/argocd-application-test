@@ -1,2 +1,6 @@
 resources:
 - ../../base/website
+patches:
+- path: patch.yaml
+  target:
+    kind: Application
