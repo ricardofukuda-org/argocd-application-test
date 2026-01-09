@@ -5,6 +5,7 @@ image:
 
 ingress:
   enabled: false
+service.port: 3000
 
 #fullnameOverride: website
 #image:
