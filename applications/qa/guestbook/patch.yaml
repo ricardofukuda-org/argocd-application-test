@@ -3,5 +3,5 @@ kind: Application
 metadata:
   name: guestbook
 spec:
-  #destination:
-    #namespace: qa
+  destination:
+    namespace: qa
