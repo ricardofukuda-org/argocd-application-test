@@ -15,3 +15,6 @@ service:
 #  tag: 2141a48cb55b26eb0cbec959e4e7792cfd8f91cc
 #ingress:
 #  enabled: false
+
+livenessProbe: {}
+readinessProbe: {}
