@@ -3,4 +3,6 @@ resources:
 patches:
 - path: patch.yaml
   target:
+    group: argoproj.io
+    version: v1alpha1
     kind: Application
