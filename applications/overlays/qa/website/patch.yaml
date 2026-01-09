@@ -9,4 +9,5 @@ spec:
     targetRevision: main
     helm:
       valueFiles:
-      - ../../applications/qa/website/values.yaml
+      - ../../applications/base/website/values.yaml
+      - ../../applications/overlays/qa/website/values.yaml
