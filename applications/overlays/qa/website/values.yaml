@@ -1,2 +1,10 @@
+fullnameOverride: website
 image:
-  tag: "2141a48cb55b26eb0cbec959e4e7792cfd8f91cc"
+  repository: 127923327338.dkr.ecr.us-east-1.amazonaws.com/website
+
+ingress:
+  enabled: false
+
+service:
+  port: 3000
+command: ["npm","start"]
