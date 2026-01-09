@@ -2,4 +2,4 @@ commonLabels:
   env: qa
 resources:
 - guestbook/
-#
+- website/
