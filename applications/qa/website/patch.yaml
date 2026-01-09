@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: website
+spec:
+  destination:
+    namespace: qa
+  source:
+    targetRevision: main
+    helm:
+      valueFiles:
+      - ../../applications/qa/website/values.yaml
