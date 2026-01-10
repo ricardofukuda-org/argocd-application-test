@@ -46,22 +46,5 @@ spec:
             host: '{{ include "baseapp.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local'
             port:
               number: {{ .Values.istio.gateway.public.port }}
----
-apiVersion: networking.istio.io/v1alpha3
-kind: DestinationRule
-metadata:
-  name: '{{ include "baseapp.fullname" . }}-public'
-spec:
-  host: '{{ include "baseapp.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local'
-  trafficPolicy:
-    loadBalancer:
-      simple: RANDOM
-    connectionPool:
-      tcp:
-        maxConnections: 0
-  subsets:
-  - name: testversion
-    labels:
-      version: v3
 {{- end }}
 
