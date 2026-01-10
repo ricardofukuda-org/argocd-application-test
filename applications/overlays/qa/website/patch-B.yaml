@@ -9,4 +9,5 @@ spec:
     helm:
       valueFiles:
       - ../../applications/overlays/qa/website/values.yaml
+      - ../../applications/overlays/qa/website/values-B.yaml
       - ../../applications/overlays/qa/website/values-qa.yaml
