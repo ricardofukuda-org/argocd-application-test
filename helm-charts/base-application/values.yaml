@@ -133,4 +133,4 @@ istio:
 
 external_secrets:
   enabled: false
-  secret_store: secretstore
+  secret_store: secretstore.secretstore
