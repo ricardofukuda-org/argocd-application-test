@@ -56,6 +56,9 @@ spec:
   trafficPolicy:
     loadBalancer:
       simple: RANDOM
+    connectionPool:
+      tcp:
+        maxConnections: 0
   subsets:
   - name: testversion
     labels:
