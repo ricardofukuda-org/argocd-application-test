@@ -56,5 +56,8 @@ spec:
   trafficPolicy:
     loadBalancer:
       simple: RANDOM
+  workloadSelector:
+    matchLabels:
+      app: ratings
 {{- end }}
 
