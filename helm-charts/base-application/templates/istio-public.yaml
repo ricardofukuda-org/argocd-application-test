@@ -1,5 +1,4 @@
 {{- if .Values.istio.gateway.public.enabled }}
-{{- with .Values.istio.gateway.public }}
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -9,7 +8,7 @@ spec:
     istio: ingressgateway-public
   servers:
     - hosts:
-        {{- range .hosts }}
+        {{- range .Values.istio.gateway.public.hosts }}
         - {{ . | quote }}
         {{- end }}
       port:
@@ -19,7 +18,7 @@ spec:
       tls:
         httpsRedirect: true
     - hosts:
-        {{- range .hosts }}
+        {{- range .Values.istio.gateway.public.hosts }}
         - {{ . | quote }}
         {{- end }}
       port:
@@ -36,7 +35,7 @@ spec:
   gateways:
     - '{{ include "baseapp.fullname" . }}-public'
   hosts:
-    {{- range .hosts }}
+    {{- range .Values.istio.gateway.public.hosts }}
     - {{ . | quote }}
     {{- end }}
   http:
@@ -45,8 +44,7 @@ spec:
             prefix: /
       route:
         - destination:
-            host: {{ include "baseapp.fullname" . }}
+            host: argo-cd-argocd-server
             port:
-              number: {{ .port }}
-{{- end }}
+              number: {{ .Values.istio.gateway.public.port }}
 {{- end }}
