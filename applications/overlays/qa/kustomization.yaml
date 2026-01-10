@@ -1,5 +1,5 @@
 commonLabels:
   env: qa
 resources:
-- guestbook/
+#- guestbook/
 - website/
