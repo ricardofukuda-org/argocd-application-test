@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 
 app: ""
+cluster: ""
+env: ""
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1

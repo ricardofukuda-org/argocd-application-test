@@ -1,3 +1,6 @@
+cluster: eks-infra
+env: qa
+
 image:
   tag: qa-2026.01.09-16.42.20 # deploy: ricardofukuda branch: master commit: 5a26644f77830d30084e3c7ed20e00312cae33b4
 
@@ -6,6 +9,3 @@ istio:
     public:
       hosts:
         - website.ricardoxyz.website
-
-external_secrets:
-  source_key: "eks-infra/qa/website"
