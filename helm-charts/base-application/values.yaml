@@ -129,5 +129,7 @@ istio:
     public:
       enabled: true
       port: 3000
-      hosts:
-        - website.ricardoxyz.website
+      hosts: []
+
+external_secrets:
+  secret_store: secretstore
