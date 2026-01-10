@@ -121,3 +121,10 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+istio:
+  gateway:
+    public:
+      enabled: true
+      hosts:
+        - website.ricardoxyz.website

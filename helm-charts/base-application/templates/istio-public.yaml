@@ -1,0 +1,28 @@
+{{- if .Values.istio.gateway.public.enabled }}
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: '{{ include "baseapp.fullname" . }}-public'
+spec:
+  selector:
+    istio: ingressgateway-public
+  servers:
+    - hosts:
+        {{- range .Values.istio.gateway.public.hosts }}
+        - {{ . | quote }}
+        {{- end }}
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        {{- range .Values.istio.gateway.public.hosts }}
+        - {{ . | quote }}
+        {{- end }}
+      port:
+        name: https
+        number: 443
+        protocol: HTTP
+{{- end }}
