@@ -8,4 +8,4 @@ istio:
         - website.ricardoxyz.website
 
 external_secrets:
-  source_key: "eks-infra/website"
+  source_key: "eks-infra/qa/website"
