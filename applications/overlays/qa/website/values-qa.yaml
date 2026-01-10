@@ -1,2 +1,11 @@
+cluster: eks-infra
+env: qa
+
 image:
-  tag: qa-2026.01.10-23.04.23 # deploy: ricardofukuda branch: master commit: 9de5baf0c19c2c788a59c8ecd3f4ea438b73e74c
+  tag: qa-2026.01.10-23.09.17 # deploy: ricardofukuda branch: master commit: 87a1a3ae062f503e68c19680dbf4eb888584f3e4
+
+istio:
+  gateway:
+    public:
+      hosts:
+        - website.ricardoxyz.website
