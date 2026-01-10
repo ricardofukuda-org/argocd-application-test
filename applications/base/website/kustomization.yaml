@@ -1,2 +1,3 @@
 resources:
 - application.yaml
+- application-B.yaml
