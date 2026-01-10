@@ -43,7 +43,7 @@ spec:
             prefix: /
       route:
         - destination:
-            host: '{{ include "baseapp.fullname" . }}'
+            host: '{{ include "baseapp.fullname" . }}.{{ .Release.Namespace }}'
             port:
               number: {{ .Values.istio.gateway.public.port }}
 {{- end }}
