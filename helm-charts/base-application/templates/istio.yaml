@@ -52,7 +52,7 @@ kind: DestinationRule
 metadata:
   name: '{{ include "baseapp.fullname" . }}-public'
 spec:
-  host: '{{ include "baseapp.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local'
+  host: '{{ include "baseapp.fullname" . }}'
   trafficPolicy:
     loadBalancer:
       simple: RANDOM
