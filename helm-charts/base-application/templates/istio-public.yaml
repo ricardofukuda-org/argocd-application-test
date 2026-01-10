@@ -48,3 +48,4 @@ spec:
             port:
               number: {{ .Values.istio.gateway.public.port }}
 {{- end }}
+
