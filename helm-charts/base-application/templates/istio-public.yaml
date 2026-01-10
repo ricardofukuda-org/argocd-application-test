@@ -1,4 +1,5 @@
 {{- if .Values.istio.gateway.public.enabled }}
+{{- with .Values.istio.gateway.public }}
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -8,7 +9,7 @@ spec:
     istio: ingressgateway-public
   servers:
     - hosts:
-        {{- range .Values.istio.gateway.public.hosts }}
+        {{- range .hosts }}
         - {{ . | quote }}
         {{- end }}
       port:
@@ -18,11 +19,34 @@ spec:
       tls:
         httpsRedirect: true
     - hosts:
-        {{- range .Values.istio.gateway.public.hosts }}
+        {{- range .hosts }}
         - {{ . | quote }}
         {{- end }}
       port:
         name: https
         number: 443
         protocol: HTTP
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: '{{ include "baseapp.fullname" . }}-public'
+  selfLink: /apis/networking.istio.io/v1alpha3/namespaces/argocd/virtualservices/argocd
+spec:
+  gateways:
+    - '{{ include "baseapp.fullname" . }}-public'
+  hosts:
+    {{- range .hosts }}
+    - {{ . | quote }}
+    {{- end }}
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: {{ include "baseapp.fullname" . }}
+            port:
+              number: {{ .port }}
+{{- end }}
 {{- end }}
