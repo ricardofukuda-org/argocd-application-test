@@ -1,2 +1,8 @@
 image:
   tag: qa-2026.01.09-16.42.20 # deploy: ricardofukuda branch: master commit: 5a26644f77830d30084e3c7ed20e00312cae33b4
+
+istio:
+  gateway:
+    public:
+      hosts:
+        - website.ricardoxyz.website

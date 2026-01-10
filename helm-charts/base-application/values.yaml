@@ -131,3 +131,6 @@ istio:
       port: 3000
       hosts:
         - website.ricardoxyz.website
+
+external-secrets:
+  key: eks-infra/website-qa

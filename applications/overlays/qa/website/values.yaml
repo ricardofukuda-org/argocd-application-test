@@ -10,3 +10,9 @@ service:
   port: 3000
 
 command: ["npm","start"]
+
+istio:
+  gateway:
+    public:
+      enabled: true
+      port: 3000
