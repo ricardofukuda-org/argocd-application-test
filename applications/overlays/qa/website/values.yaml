@@ -16,3 +16,6 @@ istio:
     public:
       enabled: true
       port: 3000
+
+external_secrets:
+  enabled: true

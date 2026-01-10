@@ -6,3 +6,6 @@ istio:
     public:
       hosts:
         - website.ricardoxyz.website
+
+external_secrets:
+  source_key: "eks-infra/website"
