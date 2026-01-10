@@ -44,7 +44,7 @@ spec:
             prefix: /
       route:
         - destination:
-            host: argo-cd-argocd-server
+            host: '{{ include "baseapp.fullname" . }}-public'
             port:
               number: {{ .Values.istio.gateway.public.port }}
 {{- end }}
