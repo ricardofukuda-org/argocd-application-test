@@ -133,4 +133,4 @@ istio:
 
 external_secrets:
   enabled: false
-  secret_store: secretstore
+  cluster_secret_store: cluster-secret-store
