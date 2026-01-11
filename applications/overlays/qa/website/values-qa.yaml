@@ -2,7 +2,7 @@ cluster: eks-infra
 env: qa
 
 image:
-  tag: qa-2026-01-11T15.28.55Z # deploy: ricardofukuda branch: master commit: c6f46f72c572ac24592fad9e490a630505af3ddb
+  tag: qa-2026-01-11T15.33.44Z # deploy: ricardofukuda branch: master commit: c6f46f72c572ac24592fad9e490a630505af3ddb
 
 istio:
   gateway:
