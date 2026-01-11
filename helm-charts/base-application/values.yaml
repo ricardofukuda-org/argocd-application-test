@@ -5,7 +5,9 @@
 app: ""
 cluster: ""
 env: ""
-region: "us-east-1"
+aws:
+  region: "us-east-1"
+  account_id: "127923327338"
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1
@@ -136,4 +138,3 @@ istio:
 
 external_secrets:
   enabled: false
-  cluster_secret_stores: cluster-secret-stores
