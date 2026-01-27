@@ -2,7 +2,7 @@ cluster: eks-infra
 env: qa
 
 image:
-  tag: qa-2026-01-18T19.21.22Z # deploy by @ricardofukuda branch: master commit: 763817febe9f0134aa75d633d6f34b88b49e52fd
+  tag: qa-2026-01-27T22.34.52Z # deploy by @ricardofukuda branch: master commit: e402a2edd42f3a2db22a6905cf4b155f1936f0fb
 
 istio:
   gateway:
@@ -11,4 +11,4 @@ istio:
         - website.ricardoxyz.website
 
 external_secrets:
-  secret_version: qa-2026-01-18T19.21.22Z # eks-infra/qa/website
+  secret_version: qa-2026-01-27T22.34.52Z # eks-infra/qa/website
